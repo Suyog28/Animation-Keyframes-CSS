@@ -1,0 +1,262 @@
+/* .container {
+  display: flex;
+}
+
+.container > div {
+  font-size: 5vw;
+  padding: 0.5rem;
+  color: white;
+}
+
+.red {
+  background-color: red;
+  flex-grow: 1;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+  width: 40px;
+} */
+
+/* One diamention layout* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+#main {
+  display: flex;
+  min-height: calc(100vh - 40vh);
+}
+
+#main > article {
+  flex: 1;
+}
+
+#main > nav,
+#main > aside {
+  flex: 0 0 30vw;
+}
+#main > nav {
+  order: -1;
+}
+header {
+  background-color: yellow;
+}
+
+aside {
+  background-color: blue;
+}
+
+nav {
+  background-color: red;
+}
+
+article {
+  background-color: black;
+}
+
+footer {
+  background-color: yellow;
+}
+
+header,
+aside,
+nav,
+article,
+footer {
+  color: white;
+  font-size: 5vw;
+} */
+
+/* two diamention layout */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+/* #main {
+  display: flex;
+  flex: 1;
+}
+
+#main > article {
+  flex: 1;
+}
+
+#main > nav,
+#main > aside {
+}
+#main > nav {
+  order: -1;
+}
+header {
+  background-color: yellow;
+}
+
+aside {
+  background-color: blue;
+}
+
+nav {
+  background-color: red;
+}
+
+article {
+  background-color: black;
+}
+
+footer {
+  background-color: yellow;
+}
+
+header,
+aside,
+nav,
+article,
+footer {
+  color: white;
+  font-size: 5vw;
+}
+
+@media screen and (max-width: 575px) {
+  #main {
+    flex-direction: column;
+  }
+} */
+/* #main {
+  background-color: blueviolet;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 10px;
+
+  animation-name: HeaderSpin;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-play-state: running;
+  animation-fill-mode: backwards;
+}
+@keyframes HeaderSpin {
+  0% {
+    letter-spacing: 1.2em;
+    color: thistle;
+  }
+  100% {
+    letter-spacing: 0.1em;
+    font-size: 50px;
+    color: darkslateblue;
+  }
+}
+
+header {
+  background-color: rgb(43, 226, 46);
+  width: 250px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 10px;
+  transition: transform 3s ease 1s;
+}
+
+header:hover {
+  transform: translateX(5000px) rotate(360deg) scale(2);
+}
+
+footer {
+  background-color: rgb(226, 156, 43);
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 10px;
+  animation: footer 5s ease 2ms infinite normal;
+}
+@keyframes footer {
+  from {
+    width: 200px;
+  }
+  to {
+    width: 500px;
+  }
+}
+.zorro {
+  width: 50px;
+  padding: 20px;
+  text-align: center;
+  background: gold;
+  position: relative;
+  animation: zorro 1s ease-in 0s 6 alternate;
+}
+@keyframes zorro {
+  from {
+    top: 0px;
+    left: 0px;
+  }
+  33% {
+    top: 0px;
+    left: 150px;
+  }
+  66% {
+    top: 120px;
+    left: 0px;
+  }
+  to {
+    top: 120px;
+    left: 150px;
+  }
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-pink {
+  padding: 0.8rem 2.3rem;
+  background-color: #e84949;
+  font-size: 18px;
+  box-shadow: 5px 5px 7px 0px #0000003f;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-pink::before {
+  content: "";
+  background-color: #1f1f1f;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  z-index: -1;
+  transition: all 0.8s;
+}
+
+.btn-pink:hover::before {
+  transform: scaleX(1);
+}
